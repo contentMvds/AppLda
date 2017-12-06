@@ -1,7 +1,8 @@
 function LoginCtrl() {
-    var vm = this;
+    var vmLogin = this;
 
-    vm.titleApp = "Login Page";
+    vmLogin.titleApp = "Login Page";
 }
 
-angular.module('appLda').controller('LoginCtrl', LoginCtrl);
+angular.module('appLda')
+        .controller('LoginCtrl', LoginCtrl);
