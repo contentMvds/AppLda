@@ -11,7 +11,7 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
         })
         .state('main.login', {
             url: 'Login',
-            controller: 'LoginCtrl as vmLogin',
+            controller: 'LoginCtrl as vm',
             templateUrl: 'modules/login/views/login.html'
         })
     }
