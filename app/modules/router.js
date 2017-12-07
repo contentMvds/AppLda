@@ -17,12 +17,28 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
         .state('main.dash', {
             url: 'dashboard',
             controller: 'DashCtrl as vm',
-            templateUrl: 'modules/facilitador/views/dash.html',
+            resolve:{
+                ckeck : function($rootScope,$location, MainFactory){
+                    if (MainFactory.validatorLogged( $rootScope.loggedIn ) ) {
+                        templateUrl: 'modules/facilitador/views/dash.html';
+                    }else{
+                        $location.path('/login');
+                    }
+                }
+            }
         })
         .state('main.facilitador', {
             url: 'facilitador',
             controller: 'FacilitadorCtrl as vm',
-            templateUrl: 'modules/facilitador/views/facilitador.html'
+            resolve:{
+                ckeck : function($rootScope,$location, MainFactory){
+                    if (MainFactory.validatorLogged( $rootScope.loggedIn ) ) {
+                        templateUrl: 'modules/facilitador/views/facilitador.html'
+                    }else{
+                        $location.path('/login');
+                    }
+                }
+            }
         })
         
     }

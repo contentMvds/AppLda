@@ -5,5 +5,6 @@ angular.module('appLda', [
     'ngAria',
     'ngMessages',
     'ngSanitize',
-    'ngStorage'
+    'ngStorage',
+    'ngCookies'
 ]);

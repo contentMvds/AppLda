@@ -1,4 +1,4 @@
-function run($rootScope, $state, $location) {
+function run($rootScope, $state, $location, $cookieStore, $http) {
     
     
     // $rootScope.$on('$stateChangeStart', function (event, next, nextParams, toState) {
