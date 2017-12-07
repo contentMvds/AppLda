@@ -18,27 +18,25 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
             url: 'dashboard',
             controller: 'DashCtrl as vm',
             resolve:{
-                ckeck : function($rootScope,$location, MainFactory){
-                    if (MainFactory.validatorLogged( $rootScope.loggedIn ) ) {
-                        templateUrl: 'modules/facilitador/views/dash.html';
-                    }else{
+                ckeck : function($rootScope,$location){
+                    if (!$rootScope.loggedIn ) {
                         $location.path('/login');
-                    }
+                    };
                 }
-            }
+            },
+            templateUrl: 'modules/facilitador/views/dash.html'
         })
         .state('main.facilitador', {
             url: 'facilitador',
             controller: 'FacilitadorCtrl as vm',
             resolve:{
-                ckeck : function($rootScope,$location, MainFactory){
-                    if (MainFactory.validatorLogged( $rootScope.loggedIn ) ) {
-                        templateUrl: 'modules/facilitador/views/facilitador.html'
-                    }else{
+                ckeck : function($rootScope,$location){
+                    if (!$rootScope.loggedIn ) {
                         $location.path('/login');
                     }
                 }
-            }
+            },
+            templateUrl: 'modules/facilitador/views/facilitador.html'
         })
         
     }
