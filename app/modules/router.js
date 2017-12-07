@@ -12,12 +12,12 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
         .state('main.login', {
             url: 'login',
             controller: 'LoginCtrl as vm',
-            templateUrl: 'modules/login/views/login.html'
+            templateUrl: 'modules/facilitador/views/login.html'
         })
         .state('main.dash', {
             url: 'dashboard',
             controller: 'DashCtrl as vm',
-            templateUrl: 'modules/dashboard/views/dash.html'
+            templateUrl: 'modules/facilitador/views/dash.html'
         })
         .state('main.facilitador', {
             url: 'facilitador',
