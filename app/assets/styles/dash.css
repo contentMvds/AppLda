@@ -1,7 +1,7 @@
-.la-margin-top-dash{
-    margin-top: 65px;
+.color-bg-red{
+    background-color: #f44336 !important;
+    color: #fff;
 }
-.la-navbar-dash{
-    background-color: #00bcd4 !important;
-    border-color: none !important;
+.text-color-bg-red{
+    color: #f44336 !important;
 }

@@ -1,0 +1,64 @@
+a{
+    color:#000 !important;
+}
+.la-margin-top{
+    margin-top: 60px;
+}
+.la-navbar-blue{
+    background-color: #00bcd4 !important;
+    border-color: none !important;
+}
+
+.card{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.card-header{
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+}
+.card-header-icons{
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding-top: 0.4rem;
+}
+.card-header-title{
+    float: left;
+    width: 90%;
+    font-size: 14pt;
+}
+.card-body{
+    float: left;
+    width: 100%;
+    padding: 1rem;
+}
+.card-footer{
+    float: left;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+.m-l-1{
+    margin-right:1rem;
+}
+.p-a-0{
+    padding: 0px !important;
+}
+.m-a-0{
+    margin: 0 !important;
+}
+.p-a-1{
+    padding: 1rem;
+}
+.p-l-0{
+    padding-left: 0px !important;
+}
+.p-r-0{
+    padding-right: 0px !important;
+}

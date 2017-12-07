@@ -1,27 +1,27 @@
 function config($stateProvider, $httpProvider, $urlRouterProvider) {
     
-        $urlRouterProvider.otherwise('login');
+        $urlRouterProvider.otherwise('/login');
     
         $stateProvider
+        .state('login', {
+            url: '/login',
+            controller: 'LoginCtrl as vm',
+            templateUrl: 'modules/facilitador/views/login.html'
+        })
         .state('main', {
             url: '/',
             abstract: true,
             controller: 'MainCtrl as vm',
             templateUrl: 'modules/commons/views/main.html'
         })
-        .state('main.login', {
-            url: 'login',
-            controller: 'LoginCtrl as vm',
-            templateUrl: 'modules/facilitador/views/login.html'
-        })
         .state('main.dash', {
             url: 'dashboard',
             controller: 'DashCtrl as vm',
-            templateUrl: 'modules/facilitador/views/dash.html'
+            templateUrl: 'modules/facilitador/views/dash.html',
         })
         .state('main.facilitador', {
             url: 'facilitador',
-            controller: 'facilitadorCtrl as vm',
+            controller: 'FacilitadorCtrl as vm',
             templateUrl: 'modules/facilitador/views/facilitador.html'
         })
         
