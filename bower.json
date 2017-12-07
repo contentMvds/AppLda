@@ -33,7 +33,8 @@
     "satellizer": "0.15.5",
     "modernizr": "3.5.0",
     "ngstorage": "^0.3.11",
-    "angular-smart-table": "^2.1.9"
+    "angular-smart-table": "^2.1.9",
+    "ui.bootstrap" : "*"
   },
   "resolutions": {
     "bootstrap": ">= 3.3.7",
