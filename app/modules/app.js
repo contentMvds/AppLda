@@ -6,5 +6,7 @@ angular.module('appLda', [
     'ngMessages',
     'ngSanitize',
     'ngStorage',
-    'ngCookies'
+    'ngCookies',
+    '720kb.datepicker',
+    'ui.utils.masks'
 ]);

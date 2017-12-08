@@ -144,11 +144,9 @@
                                     <div class="form-group">
                                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
                                             <label for="">Data da tarefa</label>
-                                            <input type="text" id ="data" class="form-control" >
-                                        </div>
-                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-r-0">
-                                            <label for="">Hora da tarefa</label>
-                                            <input type="text" id="Hora" class="form-control" >
+                                            <datepicker date-format="dd/MM/yyyy" selector="form-control">
+                                                <input class="form-control" ng-model="vm.dt"  ui-date-mask="DD/MM/YYYY"/>
+                                            </datepicker>
                                         </div>
                                     </div>
                                 </div>
