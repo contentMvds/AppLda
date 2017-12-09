@@ -16,7 +16,7 @@ function LoginCtrl($rootScope, LoginFactory, $location ) {
             $rootScope.usuario = vm.username;
             $location.path('/dashboard');
         }else{
-            alert('Você errou alguma coisa');
+            alert('Usuario ou senha invalidos!');
         }
     }
 }

@@ -2,16 +2,16 @@
     <!-- Form Create new Agenda -->
     <div class="row">
         <!-- Title Page -->
-        <div class="panel panel-default">
+        <div class="panel panel-default shadow--2dp b-a-0 br-a-0 bg-color-green">
                 <div class="panel-body">
                     <h3 class="">Facilitador de agenda </h3>
-                    <h3 class="m-l-2"><small>Editando agenda</small></h3>
+                    <h3 class="m-l-2"><small class="bg-color-grafite">Editando agenda</small></h3>
                 </div>
             </div>
             <!-- And Title Page -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row">
-                <div class="panel panel-default">
+                <div class="panel panel-default shadow--2dp b-a-0 br-a-0">
                     <div class="panel-body">
                         <!-- Alinhamento para a coluna principal -->
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
@@ -44,9 +44,10 @@
                                     <textarea name="" class="form-control" ng-model="vm.tarefa.note" cols="30" rows="10" required></textarea>
                                 </div>
                                 <div class="text-right">
-                                    <a class="btn btn-default" ui-sref="main.dash">Voltar</a>
-                                    <button type="reset" class="btn btn-warning">Limpar</button>
-                                    <button type="button" class="btn btn-primary" ng-click="vm.editTarefa()" ng-disabled="frmEditTarefa.$invalid" >Criar</button>
+                                    <a class="btn btn-default" ui-sref="main.dash"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                        Voltar</a>
+                                    <button type="reset" class="btn btn-warning"><i class="fa fa-eraser" aria-hidden="true"></i> Limpar</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.editTarefa()" ng-disabled="frmEditTarefa.$invalid" ><i class="fa fa-plus" aria-hidden="true"></i> Criar</button>
                                 </div>                               
                             </form>
                         </div>

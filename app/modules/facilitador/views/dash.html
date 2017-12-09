@@ -7,21 +7,29 @@
             <div class="card-header-icons dropdown">
                 <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a ng-click="vm.editTarefa(item.id)" >Editar</a></li>
-                        <li><a ng-click="vm.deleteTarefa(item.id)" >Apagar</a></li>
+                        <li><a class="cursor-point" ng-click="vm.editTarefa(item.id)" ><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a></li>
+                        <li><a class="cursor-point" ng-click="vm.deleteTarefa(item.id)" ><i class="fa fa-trash" aria-hidden="true"></i> Apagar</a></li>
                     </ul>
             </div>
         </div>
         <div class="card-body">
+            <h4 class="m-a-0">Data da tarefa :</h4>
             <div class="text-center">
                 <h4>
                     <span class="p-a-1 color-bg-{{ item.class }}">{{ item.dataAgenda | date:'MM/dd/yyyy' }}</span>
                 </h4>
             </div>
-            <div class="p-a-1"><b>{{ item.observacoes }}</b></div>
+            <h4 class="m-a-0">Observações:</h4>
+            <div class="p-a-1">
+                <span class="d.block m-l-1" >{{ item.observacoes }}</span>
+            </div>
         </div>
         <div class="card-footer">
-                <div class="text-color-bg-{{ item.class }}"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{ item.importancia }}</div>
+            <h4 class="m-a-0">Importância:</h4>
+            <div class=" text-right text-color-bg-{{ item.class }}">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 
+                {{ item.importancia }}
+            </div>
         </div>
     </div>
 </div>
