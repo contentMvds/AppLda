@@ -163,7 +163,7 @@
                         <!-- Coluna Principal -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <!-- Parte da Craição da tarefa -->
-                            <form action="" novalidate name="frmInsertTarefa">
+                            <form novalidate name="frmInsertTarefa">
                                 <legend>Insire as informações de sua tarefa/Atividade</legend>
                                 <div class="form-group">
                                     <label for="">Titulo</label>
@@ -188,13 +188,17 @@
                                         <option value="Prioridade">Prioridade</option>
                                     </select>
                                 </div>
+                                <div class="form-group m-t-1" ng-show="vm.showImportanciaContinuer">
+                                    <label>Importância</label>
+                                    <input type="text" class="form-control" ng-model="vm.agenda.importance" name="importancia" required>
+                                </div>
                                 <div class="form-group ">
                                     <label for="">Informações relevantes</label>
-                                    <textarea name="" class="form-control" ng-model="vm.agenda.Note" cols="30" rows="10"></textarea>
+                                    <textarea name="" class="form-control" ng-model="vm.agenda.note" cols="30" rows="10" required></textarea>
                                 </div>
                                 <div class="text-right">
                                     <button type="reset" class="btn btn-warning">Limpar</button>
-                                    <button type="button" class="btn btn-primary" ng-click="vm.insertTarefa" ng-disabled="frmInsertTarefa.$invalid" >Criar</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.insertTarefa()" ng-disabled="frmInsertTarefa.$invalid" >Criar</button>
                                 </div>                               
                             </form>
                         </div>

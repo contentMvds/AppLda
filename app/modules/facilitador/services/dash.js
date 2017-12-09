@@ -1,18 +1,27 @@
 function DashService( $http ){
     // Caminho para pegas os dados do serviço
-    var url = "http://localhost:8083/agenda";
+    var url = "http://localhost:8083/agenda/";
     
     var service = {
         getListService : _getListService
     };
-    // Função para pegas as informações do serviço
-    function _getListService(){
 
-       return $http.get( url );
+    /**
+     * Função responsavel por pegar todas as agendas 
+     * @param : String 
+     * @return : Object
+     */
+    function _getListService( user ){
+        
+        return $http({
+            method: 'GET',
+            url: url + 'user/' + user
+        });
     
     }
     
     return service;
 }
 
-angular.module('appLda').service('DashService',DashService);
+angular.module('appLda')
+        .service('DashService',DashService);

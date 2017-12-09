@@ -1,0 +1,61 @@
+<div class="container">   
+    <!-- Form Create new Agenda -->
+    <div class="row">
+        <!-- Title Page -->
+        <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3 class="">Facilitador de agenda </h3>
+                    <h3 class="m-l-2"><small>Editando agenda</small></h3>
+                </div>
+            </div>
+            <!-- And Title Page -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <!-- Alinhamento para a coluna principal -->
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                        <!-- Coluna Principal -->
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <!-- Parte da Craição da tarefa -->
+                            <form novalidate name="frmEditTarefa">
+                                <legend ng-bind="vm.tarefa.title"></legend>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-a-0 m-b-1">
+                                    <div class="form-group">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                                            <label for="">Data</label>
+                                            <datepicker date-format="dd/MM/yyyy" selector="form-control">
+                                                <input class="form-control" ng-model="vm.tarefa.dt_activity"  ui-date-mask="DD/MM/YYYY"/ required>
+                                            </datepicker>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group m-t-1">
+                                    <label>Escolhar a importância</label>
+                                    <select name="" class="form-control" ng-model="vm.tarefa.importance" required>
+                                        <option></option>
+                                        <option value="Urgente">Urgente</option>
+                                        <option value="Importante">Importante</option>
+                                        <option value="Prioridade">Prioridade</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="">Informações relevantes</label>
+                                    <textarea name="" class="form-control" ng-model="vm.tarefa.note" cols="30" rows="10" required></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <a class="btn btn-default" ui-sref="main.dash">Voltar</a>
+                                    <button type="reset" class="btn btn-warning">Limpar</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.editTarefa()" ng-disabled="frmEditTarefa.$invalid" >Criar</button>
+                                </div>                               
+                            </form>
+                        </div>
+                        <!-- Alinhamento para a coluna principal -->
+                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- And Form Create-->
+</div>

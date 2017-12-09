@@ -37,6 +37,9 @@ function DashFactory(){
         if( angular.isUndefined(item) ){
             return;
         }
+        if( angular.isDefined(item.id) ){
+            result.id = item.id;
+        }
         if( angular.isDefined(item.title) ){
             result.titulo = item.title;
         }
@@ -52,6 +55,7 @@ function DashFactory(){
         if( angular.isDefined(item.Note) ){
             result.observacoes = item.Note;
         }
+        
         // Verificando o tipo de importancia e inserindo a cor necessaria
         if(item.importance == "Urgente"){
             result.class = 'red';

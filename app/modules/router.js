@@ -38,6 +38,19 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
             },
             templateUrl: 'modules/facilitador/views/facilitador.html'
         })
+        .state('main.editTarefa', {
+            url: 'editTarefa',
+            controller: 'EditFacilitadorCtrl as vm',
+            resolve:{
+                ckeck : function($rootScope, $location){
+                    if (!$rootScope.loggedIn ) {
+                        $location.path('/login');
+                    }
+                }
+            },
+            templateUrl: 'modules/facilitador/views/editTarefa.html',
+            params:{'id': null},
+        })
         
     }
     
