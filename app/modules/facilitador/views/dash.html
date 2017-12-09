@@ -1,30 +1,30 @@
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <div class="card">
-        <div class="card-header color-bg-red">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-repeat="item in vm.agendas">
+    <div class="card shadow--2dp">
+        <div class="card-header color-bg-{{ item.class }}">
             <div class="card-header-title">
-                Comprimisso Muito Importante
+                {{ item.titulo }}
             </div>
-            <div class="card-header-icons">
-                <i class="fa fa-times" aria-hidden="true"></i>
+            <div class="card-header-icons dropdown">
+                <a  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a >Editar</a></li>
+                        <li><a >Apagar</a></li>
+                    </ul>
+                
             </div>
         </div>
         <div class="card-body">
             <div class="text-center">
                 <h4>
-                    <span class="p-a-1 color-bg-red">07/12/2017</span>
+                    <span class="p-a-1 color-bg-{{ item.class }}">{{ item.dataAgenda | date:'MM/dd/yyyy' }}</span>
                 </h4>
             </div>
-            <div class="p-a-1"><b>Acabar sistema de Agendamento</b></div>
+            <div class="p-a-1"><b>{{ item.observacoes }}</b></div>
         </div>
         <div class="card-footer">
-                <div class="text-color-bg-red"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Urgente e Importante</div>
+                <div class="text-color-bg-{{ item.class }}"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{ item.importancia }}</div>
         </div>
     </div>
 </div>
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-</div>
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-</div>
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-</div>
+
     

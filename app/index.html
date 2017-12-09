@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="appLda">
+<html lang="pt-br" ng-app="appLda">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AppLda</title>
+    <title>Facilitador De Agenda</title>
+    <!-- Styles Libary Default -->
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.css"></script>
-    
+    <!-- Styles Customer -->
     <link rel="stylesheet" href="assets/styles/login.css">
     <link rel="stylesheet" href="assets/styles/dash.css">
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -21,7 +22,6 @@
     <!-- Application Libraries -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 
     <!-- Application Dependencies -->
     <script src="bower_components/angular/angular.js"></script>
@@ -37,24 +37,26 @@
     <script src="bower_components/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
     <script src="bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
     
-    
     <!-- Application Configuration -->
     <script src="modules/app.js"></script>
     <script src="modules/router.js"></script>
     <script src="modules/config.js"></script>
+    <!-- And Application Configuration -->
     
     <!-- Application Run -->
-    <script src="modules/commons/controllers/main.ctrl.js"></script>
-    <!-- Services -->
-    <!-- Factories -->
-    <script src="modules/commons/factories/main.js"></script>
-    <script src="modules/facilitador/factories/login.js"></script>
-    <!-- Controllers -->
-    <script src="modules/facilitador/controllers/login.ctrl.js"></script>
-    <script src="modules/facilitador/controllers/dash.ctrl.js"></script>
-    <script src="modules/facilitador/controllers/facilitador.ctrl.js"></script>
-    
-    
-   
+
+        <!-- Services -->
+        <script src="modules/facilitador/services/dash.js"></script>
+        <!-- Factories -->
+        <script src="modules/commons/factories/main.js"></script>
+        <script src="modules/facilitador/factories/login.js"></script>
+        <script src="modules/facilitador/factories/dash.js"></script>
+        
+        <!-- Controllers -->
+        <script src="modules/commons/controllers/main.ctrl.js"></script>
+        <script src="modules/facilitador/controllers/login.ctrl.js"></script>
+        <script src="modules/facilitador/controllers/dash.ctrl.js"></script>
+        <script src="modules/facilitador/controllers/facilitador.ctrl.js"></script>
+    <!-- And rum Application -->
 </body>
 </html>

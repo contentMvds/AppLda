@@ -1,15 +1,16 @@
 body{
     background-color: #f7f4f4;
 }
-
 .la-content-login{
     width:38rem;
     height: auto;
     padding: 1rem;
     margin-top: 15rem;
-    border: 1px solid #ccc;
     background-color: #fff;
 }
 .la-div-separator{
     height: 3rem;
+}
+.navbar-default{
+    border-color: transparent !important;
 }

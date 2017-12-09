@@ -5,3 +5,26 @@
 .text-color-bg-red{
     color: #f44336 !important;
 }
+.color-bg-yellow{
+    background-color: #ffeb3b !important;
+    color: #000;
+}
+.text-color-bg-yellow{
+    color: #ffeb3b !important;
+}
+.color-bg-green{
+    background-color: #28f36c !important;
+    color: #fff;
+}
+.text-color-bg-green{
+    color: #28f36c !important;
+}
+
+.card-header-icons > a{
+    display: block;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.card-header-icons > a:hover{
+    background-color: rgba(0, 0, 0, 0.14);
+}

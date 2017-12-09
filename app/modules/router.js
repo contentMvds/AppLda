@@ -6,7 +6,7 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
         .state('login', {
             url: '/login',
             controller: 'LoginCtrl as vm',
-            templateUrl: 'modules/facilitador/views/login.html'
+            templateUrl: 'modules/facilitador/views/login.html',
         })
         .state('main', {
             url: '/',

@@ -13,6 +13,7 @@ function LoginCtrl($rootScope, LoginFactory, $location ) {
 
         if (result) {
             $rootScope.loggedIn = true;
+            $rootScope.usuario = vm.username;
             $location.path('/dashboard');
         }else{
             alert('Você errou alguma coisa');

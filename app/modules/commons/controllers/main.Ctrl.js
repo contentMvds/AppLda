@@ -1,6 +1,6 @@
-function MainCtrl() {
+function MainCtrl($rootScope) {
     var vm = this;
-    vm.hideMenu = false;
+    vm.usuario = $rootScope.usuario;
 }
 
 angular.module('appLda')

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top la-navbar-blue" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top la-navbar-blue shadow--2dp" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -20,14 +20,10 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right" >
-                <li><a ui-sref="#">Usuario</a></li>
                 <li class="dropdown">
-                    <a  class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <a  class="dropdown-toggle" data-toggle="dropdown">{{ vm.usuario }} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="javascript:window.location.reload(true)">Sair</a></li>
                     </ul>
                 </li>
             </ul>

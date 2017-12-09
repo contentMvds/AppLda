@@ -1,15 +1,25 @@
 function FacilitadorCtrl() {
     var vm = this;
-    vm.opened = false;
 
-    vm.open = _open;
-    
-    function _open($event){
-        $event.preventDefault();
-        $event.stopPropagation();
+    vm.showformSecond = false;
+    vm.showImportancia = false;
+    vm.facilitador = {};
 
-        vm.opened = true;
-        console.log(vm.opened);
+
+    vm.pular = _pular;
+    vm.continuar = _continuar;
+    vm.insertTarefa = _insertTarefa;
+
+    function _continuar(){
+        vm.showformSecond = true;
+        vm.showImportancia = true;
+        
+    }
+    function _insertTarefa(){}
+   
+    function _pular(){
+        vm.showformSecond = true;
+        vm.showImportancia = true;
     }
 }
 

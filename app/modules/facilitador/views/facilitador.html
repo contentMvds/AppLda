@@ -1,130 +1,160 @@
 <div class="container">   
-    <!-- Facilitador das informações -->
+     <!-- Form Help HelpImportância -->
     <div class="row">
+        <!-- Title Page -->
         <div class="panel panel-default">
             <div class="panel-body">
                 <h4 class="">Facilitador de agenda Responda estas perguntas antes de inserir as informações da agenda:</h4>
             </div>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>É necessario consumir muito recuso para efetuar a tarefa?</h4>
-                    <div>
-                        <input type="radio" name="" value=""> Sim
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Talvez
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não tenho certeza
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Esta Tarefa vai atrapalhar outra Tarefa ?</h4>
-                    <div>
-                        <input type="radio" name="" value=""> Sim
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Talvez
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não tenho certeza
+        <!-- And Title Page -->
+        <form action="" novalidate name="frmHelp" >
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>É necessario consumir muito recuso para efetuar a tarefa?</h4>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="recurso" ng-model="vm.facilitador.recurso" value="sim"> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="recurso" ng-model="vm.facilitador.recurso" value="nao"> Não
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="recurso" ng-model="vm.facilitador.recurso" value="sn"> Não tenho certeza
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Outras atividades Depende desta Atividade/Tarefa ?</h4>
-                    <div>
-                        <input type="radio" name="" value=""> Sim
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Talvez
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não tenho certeza
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>Outras tarefas Depende desta Tarefa ?</h4>
-                    <div>
-                        <input type="radio" name="" value=""> Sim
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Talvez
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não tenho certeza
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Esta Tarefa vai atrapalhar outra Tarefa ?</h4>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="atrapalhar" ng-model="vm.facilitador.atrapalhar" value="sim"> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="atrapalhar" ng-model="vm.facilitador.atrapalhar" value="nao"> Não
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="atrapalhar" ng-model="vm.facilitador.atrapalhar" value="sn"> Não tenho certeza
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <h4>O prazo para esta tarefa é curto?</h4>
-                    <div>
-                        <input type="radio" name="" value=""> Sim
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Talvez
-                    </div>
-                    <div>
-                        <input type="radio" name="" value=""> Não tenho certeza
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Outras atividades Depende desta Atividade/Tarefa ?</h4>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="outras" ng-model="vm.facilitador.outras" value="sim"> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="outras" ng-model="vm.facilitador.outras" value="nao"> Não
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="outras" ng-model="vm.facilitador.outras" value="sn"> Não tenho certeza
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Outras tarefas Depende desta Tarefa ?</h4>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="depende" ng-model="vm.facilitador.depende" value="sim"> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="depende" ng-model="vm.facilitador.depende" value="nao"> Não
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" required name="depende" ng-model="vm.facilitador.depende" value="sn"> Não tenho certeza
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>O prazo para esta tarefa é curto?</h4>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prazo" ng-model="vm.facilitador.prazo" value="sim"> Sim
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prazo" ng-model="vm.facilitador.prazo" value="nao"> Não
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prazo" ng-model="vm.facilitador.prazo" value="sn"> Não tenho certeza
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <h4>Esta tarefa ira lhe trazer prejuizo?</h4>
-                        <div>
-                            <input type="radio" name="" value=""> Sim
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prejuizo" ng-model="vm.facilitador.prejuizo" value="sim"> Sim
+                            </label>
                         </div>
-                        <div>
-                            <input type="radio" name="" value=""> Não
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prejuizo" ng-model="vm.facilitador.prejuizo" value="nao"> Não
+                            </label>
                         </div>
-                        <div>
-                            <input type="radio" name="" value=""> Talvez
-                        </div>
-                        <div>
-                            <input type="radio" name="" value=""> Não tenho certeza
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="prejuizo" ng-model="vm.facilitador.prejuizo" value="sn"> Não tenho certeza
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-right m-b-1">
+                <button class="btn btn-success" ng-click="vm.continuar()" ng-disabled="frmHelp.$invalid" type="button" >
+                    Continuar
+                </button>
+                <button class="btn btn-warning" ng-click="vm.pular()" type="button" >
+                    Pular Etapa
+                </button>
+            </div>
+        </form>
     </div>
-    <!-- From Principal -->
+    <!-- And Form HelpImportância -->
+    <!-- Form Create new Agenda -->
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="vm.showformSecond">
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -133,30 +163,38 @@
                         <!-- Coluna Principal -->
                         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                             <!-- Parte da Craição da tarefa -->
-                            <form action="" method="POST" role="form">
+                            <form action="" novalidate name="frmInsertTarefa">
                                 <legend>Insire as informações de sua tarefa/Atividade</legend>
-                            
                                 <div class="form-group">
-                                    <label for="">Titulo da tarefa</label>
-                                    <input type="text" class="form-control" >
+                                    <label for="">Titulo</label>
+                                    <input type="text" class="form-control" ng-model="vm.agenda.title" required>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-a-0">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 p-a-0 m-b-1">
                                     <div class="form-group">
                                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 p-l-0">
-                                            <label for="">Data da tarefa</label>
+                                            <label for="">Data</label>
                                             <datepicker date-format="dd/MM/yyyy" selector="form-control">
-                                                <input class="form-control" ng-model="vm.dt"  ui-date-mask="DD/MM/YYYY"/>
+                                                <input class="form-control" ng-model="vm.agenda.dt_activity"  ui-date-mask="DD/MM/YYYY"/ required>
                                             </datepicker>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Informações relevantes a tarefa</label>
-                                    <textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+                                <div class="form-group m-t-1" ng-show="vm.showImportancia">
+                                    <label>Escolhar a importância</label>
+                                    <select name="" class="form-control" ng-model="vm.agenda.importance" required>
+                                        <option></option>
+                                        <option value="Urgente">Urgente</option>
+                                        <option value="Importante">Importante</option>
+                                        <option value="Prioridade">Prioridade</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="">Informações relevantes</label>
+                                    <textarea name="" class="form-control" ng-model="vm.agenda.Note" cols="30" rows="10"></textarea>
                                 </div>
                                 <div class="text-right">
                                     <button type="reset" class="btn btn-warning">Limpar</button>
-                                    <button type="submit" class="btn btn-primary">Criar</button>
+                                    <button type="button" class="btn btn-primary" ng-click="vm.insertTarefa" ng-disabled="frmInsertTarefa.$invalid" >Criar</button>
                                 </div>                               
                             </form>
                         </div>
@@ -167,4 +205,6 @@
             </div>
         </div>
     </div>
+    <!-- And Form Create-->
 </div>
+     
